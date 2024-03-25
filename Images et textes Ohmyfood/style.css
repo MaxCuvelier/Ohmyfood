@@ -1,10 +1,25 @@
+h1, h2, p, a, input {
+    font-family: "roboto", sans-serif;
+}
+
+.main-container {
+    width: 100%;
+
+    box-sizing: border-box;
+}
+
 /***Header***/
 .header {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-bottom: 25px;
+    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.20);
+    padding: 20px 0px 20px 0px;
+}
+
+.header a {
+    display: none;
 }
 
 /******barre de recherche*******/
@@ -13,20 +28,117 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    margin-top: 3px;
+    gap: 30px;
     background-color: #EAEAEA;
     width: 100%;
+    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.20);
 }
 
 .location a {
     display: block;
-    width: 50px;
-    height: 50px;
+}
+
+.location a:visited {
+    color: black;
 }
 
 .ville-selection {
     border: none;
-    font-size: 2em;
+    font-size: 1.8em;
     width: 290px;
-    background-color: #EAEAEA;
+    background-color: rgb(234, 234, 234);
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
+
+/********Intro************/
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 100px;
+    background-color: #eaeaea85
+}
+
+.intro h1 {
+    font-size: 5.5vw;
+    width: 60%;
+    margin-bottom: 0;
+}
+
+.intro p {
+    font-size: 4vw;
+    width: 85%;
+    
+}
+
+/*********bouton************/
+
+.bouton {
+    border-radius: 35px;
+    padding: 20px 10px 20px 10px;
+    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    width: 40%;
+    font-size: 3vw;
+    text-decoration: none;
+    color: white;
+    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.15);
+}
+
+/**********Filtres************/
+
+.filtres {
+    display: flex;
+    flex-direction: column;
+}
+
+.boutons-filtres{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.cards-bouton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+}
+
+.chiffre {
+    position: absolute;
+    left: 10px;
+    bottom: 40px;
+}
+
+.fonctionnement__number {
+    display: inline;
+    background-color: #9356DC;
+    border-radius: 30px;
+    color: white;
+    padding: 10px 15px 10px 15px;
+}
+
+.choix {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.cards-bouton a {
+    color: black;
+    text-decoration: none;
+    font-size: 3vw;
+    align-items: center;
+    padding: 35px;
+    background-color: #f6f6f6;
+    border-radius: 25px;
+    width: 85%;
+    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.15);
+}
+

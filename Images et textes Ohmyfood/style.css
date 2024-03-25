@@ -1,0 +1,32 @@
+/***Header***/
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+/******barre de recherche*******/
+.location {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background-color: #EAEAEA;
+    width: 100%;
+}
+
+.location a {
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+
+.ville-selection {
+    border: none;
+    font-size: 2em;
+    width: 290px;
+    background-color: #EAEAEA;
+}

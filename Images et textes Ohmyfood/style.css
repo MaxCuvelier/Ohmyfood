@@ -2,9 +2,11 @@ h1, h2, p, a, input {
     font-family: "roboto", sans-serif;
 }
 
-.main-container {
-    width: 100%;
 
+.main-container {
+    position: absolute;
+    left: 0;
+    width: 100%;
     box-sizing: border-box;
 }
 
@@ -95,6 +97,7 @@ h1, h2, p, a, input {
 .filtres {
     display: flex;
     flex-direction: column;
+    margin: 20px;
 }
 
 .boutons-filtres{
@@ -142,3 +145,6 @@ h1, h2, p, a, input {
     box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.15);
 }
 
+img {
+    display: none;
+}

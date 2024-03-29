@@ -180,3 +180,27 @@
         }
     }
 }
+
+Footer {
+    background-color: rgba(53, 53, 53, 1);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding-left: 20px;
+
+        &__mini-logo {
+            color: white;
+            size: 50%;
+        }
+
+        & ul {
+            color: white;
+            list-style: none;
+            text-decoration: none;
+
+        & a:visited {
+            color: white;
+            }
+        }
+}

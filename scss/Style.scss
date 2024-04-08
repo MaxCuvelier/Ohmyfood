@@ -161,9 +161,8 @@
 
         &--text-nouveau {
             display: inline;
-            position: relative;
-            right: -85%;
-            top: -180px;
+            position: absolute;
+            right: 45px;
             background: rgba(153, 226, 208, 1);
             padding: 10px;
             border-radius: 2px;
@@ -191,7 +190,6 @@
             color: black;
             padding: 0px 30px 10px 30px;
             height: 80px;
-            margin-top: -15px;
 
                 &--text-card {
                     display: flex;

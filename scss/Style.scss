@@ -191,16 +191,37 @@
             padding: 0px 30px 10px 30px;
             height: 80px;
 
-                &--text-card {
-                    display: flex;
-                    flex-direction: column;
-                }
-            
+            &--text-card {
+                display: flex;
+                flex-direction: column;
+            }
+        
             & h3, p {
                 margin-top: 9px;
                 margin-bottom: 9px;
             }
         }
+        &--card-contenu-nouveau {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1em;
+            color: black;
+            padding: 0px 30px 10px 30px;
+            height: 80px;
+
+            &--text-card {
+                display: flex;
+                flex-direction: column;
+            }
+        
+            & h3, p {
+                margin-top: 9px;
+                margin-bottom: 9px;
+            }
+        }
+       
     }
 }
 
@@ -253,4 +274,107 @@
                     padding-top: 9px; 
                 } 
              }     
+}
+
+@media (min-width: 1440px) {
+
+    .header {
+        box-shadow: none;
+    }
+
+    .location {
+        box-shadow: none;
+    }
+
+    .intro {
+        padding-bottom: 35px;
+    
+
+        & h1 {
+            font-size: 3vw;
+            padding-bottom: 15px;
+            margin-top: 0;
+        }
+
+        & p {
+            font-size: 1.5vw;
+            font-weight: 300;
+        }
+    }
+
+    .bouton {
+        font-size: 1.5vw;
+        width: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .filtres {
+        align-items: center;
+        padding-bottom: 35px;
+
+        & h1 {
+            width: 68%;
+        }
+    }
+
+    .boutons-filtres {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .cards-bouton {
+
+        &__choix {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        &__fonctionnement-number {
+            padding: 5px 10px 5px 10px;
+    }
+    }
+
+    .espace-resto {
+        align-items: center;
+
+        & h2 {
+        width: 78%;
+    }
+    }
+
+    .resto-cards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 40px;
+
+        &__bouton-resto {
+            width: 40%;
+
+            &--text-nouveau {
+                display: inline;
+                position: relative;
+                right: -78%;
+                top: -55%;
+            }
+
+            &--card-contenu-nouveau {
+                margin-top: -15px;
+            }
+        }
+    }
+
+    .footer {
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 50px;
+
+        & li {
+            display: inline;
+            padding-left: 15px;
+        }
+    }
 }

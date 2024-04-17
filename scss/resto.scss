@@ -104,22 +104,26 @@
             }
         }
     }
-}
+    &__bouton {
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-.bouton {
-    border-radius: 35px;
-    padding: 20px 10px 20px 10px;
-    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-    width: 30%;
-    font-size: 16px;
-    font-weight: 500;
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.15);
-    margin-left: 35%;
-    margin-top: 45px;
-    margin-bottom: 45px;
+            &--commande {
+            border-radius: 35px;
+            padding: 20px 10px 20px 10px;
+            background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+            width: 30%;
+            font-size: 16px;
+            font-weight: 500;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.15);
+            margin-top: 45px;
+            margin-bottom: 45px;
+        }
+    }
 }
 
 .logo-blanc {
@@ -127,6 +131,7 @@
 }
 
 .footer {
+    margin-top: -40px;
     background-color: rgba(53, 53, 53, 1);
     color: white;
     display: flex;
@@ -163,4 +168,47 @@
                     padding-top: 9px; 
                 } 
              }     
+}
+
+@media (min-width: 1440px) {
+
+    .header {
+        width: 60%;
+    }
+
+    .carte {
+        width: 80%;
+        margin: 0 10% 0 10%;
+
+        &__titre {
+            justify-content: center;
+            gap: 20px;
+        }
+
+        &__plats {
+            margin: 0 20% 0 20%;
+        }
+
+        &__bouton {
+
+            &--commande {
+                width: 20%;
+            }
+        }
+    }
+
+
+
+    .footer {
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 50px;
+
+        & li {
+            display: inline;
+            padding-left: 15px;
+        }
+    }
+
 }

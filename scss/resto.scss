@@ -69,10 +69,25 @@
         }
     }
 
+    @keyframes carte__plats {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
     &__plats {
         display: flex;
         flex-direction: column;
         gap: 20px;
+        animation: carte__plats 1000ms backwards;
+        @for $i from 1 through 3 {
+            &--#{$i} {
+                animation-delay: 1000ms * $i;
+            }
+        }
 
         & h2 {
             display: inline;

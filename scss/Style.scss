@@ -82,7 +82,7 @@
             width: 85%;
         }
 }
-
+/////////////////////////////////
 .bouton {
     @include bouton;
     z-index: 1;
@@ -172,7 +172,6 @@
     box-sizing: border-box;
     gap: 20px;
     
-
     &__bouton-resto {
         display: flex;
         flex-direction: column;
@@ -187,6 +186,11 @@
             padding: 10px;
             border-radius: 2px;
             color: rgba(0, 135, 102, 1);
+            opacity: 1;
+            transition: opacity 400ms;
+            &:hover {
+                opacity: 0;
+        }
         }
 
         & img {
@@ -211,15 +215,16 @@
             padding: 0px 30px 10px 30px;
             height: 80px;
 
-            &--text-card {
-                display: flex;
-                flex-direction: column;
-            }
-        
-            & h3, p {
-                margin-top: 9px;
-                margin-bottom: 9px;
-            }
+            & > .favorie {
+                &:hover {
+                    & > .fa-regular {
+                    opacity: 0;
+                    }
+                    & > .fa-solid {
+                        opacity: 1;
+                    }
+                }
+            }            
         }
         &--card-contenu-nouveau {
             display: flex;
@@ -230,11 +235,16 @@
             color: black;
             padding: 0px 30px 10px 30px;
             height: 80px;
-            margin-bottom: -31px;
 
-            &--text-card {
-                display: flex;
-                flex-direction: column;
+            & > .favorie {
+                &:hover {
+                    & > .fa-regular {
+                    opacity: 0;
+                    }
+                    & > .fa-solid {
+                        opacity: 1;
+                    }
+                }
             }
         
             & h3, p {
@@ -247,38 +257,15 @@
 }
 
 .fa-regular {
-    display: inline;
     position: relative;
-    top: -129%;
-    right: -88%;
-    margin-bottom: -15px;
-}
-.fa-solid.fa-heart {
-    display: inline;
-    position: relative;
-    top: -129%;
-    right: -81.55%;
+    right: -45px;
+    z-index: 2;
+    transition: opacity 300ms;
+    transition-delay: 100ms;
 }
 
-.fa-regular {
-    display: inline;
-    opacity: 1;
-    transform: opacity z-index scale;
-    z-index: 1;
-    
-    &:hover {
-        opacity: 0;
-        z-index: -1;
-        transition: transform 2000ms;
-        &
-    }
-    &:hover + .fa-solid {
-        transition: transform 2000ms;
-        opacity: 1;
-        z-index: 1;
-        scale: (1.05);
-    }
-}
+
+
 
 .fa-solid.fa-heart{
     background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
@@ -286,13 +273,11 @@
     -webkit-text-fill-color: transparent;
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
-    z-index: 1;
     opacity: 0;
-    transform: opacity z-index 2000ms;
-    &:hover {
-        opacity: 1;
-        z-index: 2;
-    }
+    transition: opacity 300ms;
+    position: relative;
+    right: -9px;
+    z-index: 1;
 }
 
 .fa-heart {
@@ -423,6 +408,9 @@
             }
 
             &--card-contenu-nouveau {
+                margin-top: -15px;
+            }
+            &--card-contenu {
                 margin-top: -15px;
             }
         }

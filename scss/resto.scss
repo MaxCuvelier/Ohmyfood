@@ -137,6 +137,26 @@
             box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.15);
             margin-top: 45px;
             margin-bottom: 45px;
+            position: relative;
+            z-index: 1;
+                &:hover {
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    border-radius: 35px;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    opacity: 0;
+                    z-index:-1;
+                    transition: opacity 250ms;
+                    background: linear-gradient(200.64deg, #be8dfa -5.2%, #FF79DA 140.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+                }
         }
     }
 }

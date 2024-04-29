@@ -85,6 +85,26 @@
 
 .bouton {
     @include bouton;
+    z-index: 1;
+    position: relative;
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        border-radius: 35px;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        opacity: 0;
+        z-index:-1;
+        transition: opacity 250ms;
+        background: linear-gradient(200.64deg, #be8dfa -5.2%, #FF79DA 140.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+    }
 }
 
 .filtres {
@@ -210,6 +230,7 @@
             color: black;
             padding: 0px 30px 10px 30px;
             height: 80px;
+            margin-bottom: -31px;
 
             &--text-card {
                 display: flex;
@@ -225,12 +246,52 @@
     }
 }
 
+.fa-regular {
+    display: inline;
+    position: relative;
+    top: -129%;
+    right: -88%;
+    margin-bottom: -15px;
+}
+.fa-solid.fa-heart {
+    display: inline;
+    position: relative;
+    top: -129%;
+    right: -81.55%;
+}
+
+.fa-regular {
+    display: inline;
+    opacity: 1;
+    transform: opacity z-index scale;
+    z-index: 1;
+    
+    &:hover {
+        opacity: 0;
+        z-index: -1;
+        transition: transform 2000ms;
+    }
+    &:hover + .fa-solid {
+        transition: transform 2000ms;
+        opacity: 1;
+        z-index: 1;
+        scale: (1.05);
+    }
+}
+
 .fa-solid.fa-heart{
     background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
+    z-index: 1;
+    opacity: 0;
+    transform: opacity z-index 2000ms;
+    &:hover {
+        opacity: 1;
+        z-index: 2;
+    }
 }
 
 .fa-heart {

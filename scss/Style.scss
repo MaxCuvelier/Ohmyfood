@@ -270,6 +270,7 @@
         opacity: 0;
         z-index: -1;
         transition: transform 2000ms;
+        &
     }
     &:hover + .fa-solid {
         transition: transform 2000ms;

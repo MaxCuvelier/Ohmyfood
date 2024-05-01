@@ -78,14 +78,34 @@
         }
     }
 
+    @keyframes check {
+        0% {
+            width: 0;
+            padding: 0;
+        }
+        100% {
+            width: 30px;
+            padding: 29px 20px;
+        }
+    }
+
+    @keyframes check-bar {
+        0% {
+            width: calc(100% - 50px);
+        }
+        100% {
+            width: calc(100% - 110px);
+        }
+    }
+    
     &__plats {
         display: flex;
         flex-direction: column;
         gap: 20px;
-        animation: carte__plats 1000ms backwards;
+        animation: carte__plats 400ms backwards;
         @for $i from 1 through 3 {
             &--#{$i} {
-                animation-delay: 1000ms * $i;
+                animation-delay: 400ms * $i;
             }
         }
 
@@ -101,21 +121,53 @@
         &--card {
             display: flex;
             flex-direction: row;
+            align-items: center;
             justify-content: space-between;
             background-color: white;
             border-radius: 20px;
             margin-left: 20px;
             margin-right: 20px;
-            padding: 15px;
+            padding-left: 15px;
             @include box-shadow;
+            &:active {
+                & > .text-cards{
+                animation: check-bar 500ms forwards;
+                }
+                & > .check {
+                animation: check 500ms forwards;
+                }
+            }
+
+            & > .text-cards {
+                padding: 15px 0px;
+                width: calc(100% - 50px);
+            }
+
+            & > .check {
+                width: 0;
+                overflow-x: hidden;
+                overflow-y: hidden;
+                font-size: x-large;
+                background-color: rgb(153, 226, 208);
+                height: 100%;
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+                color: white;
+            }
 
             & h3 {
                 margin-top: 5px;
                 margin-bottom: 5px;
             }
-            & p {
+            & p:not(.euros){
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
                 margin-top: 5px;
                 margin-bottom: 5px;
+            }
+            & > .euros {
+                padding-right: 15px;
             }
         }
     }
@@ -205,7 +257,7 @@
              }     
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 900px) {
 
     .header {
         width: 60%;

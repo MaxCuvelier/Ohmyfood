@@ -157,6 +157,7 @@ body.loading .loader {
         z-index:-1;
         transition: opacity 250ms;
         background: linear-gradient(200.64deg, #be8dfa -5.2%, #FF79DA 140.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+        box-shadow: 0px 5.5px 5px rgba(0, 0, 0, 0.20);
     }
 }
 
@@ -207,6 +208,13 @@ body.loading .loader {
         border-radius: 25px;
         @include box-shadow; 
     }
+}
+
+.fa-mobile-screen-button, .fa-list-ul {
+    color: #7e7e7e;
+}
+.fa-store {
+    color: #9356dc;
 }
 
 .espace-resto {
@@ -377,6 +385,9 @@ body.loading .loader {
                     color: white;
                 }
              }     
+}
+.fa-handshake-angle, .fa-utensils {
+    color: #ffffff;
 }
 
 @media (min-width: 1000px) {

@@ -8,13 +8,19 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 65%;
-    margin-left: 25px;
+    margin-right: 35%;
+    gap: 20vw;
+    margin-left: 10px;
     padding-bottom: 10px;
 
     & img {
-        height: 50px;
+        height: 35px;
+        width: 162px;
     }
+}
+
+body {
+    margin: 8px 0px 0px 0px;
 }
 
 .main-container {
@@ -24,7 +30,7 @@
 }
 
 .fa-arrow-left {
-    font-size: xx-large;
+    font-size: x-large;
 }
 
 .euros {
@@ -38,8 +44,7 @@
 }
 
 .fa-heart {
-    font-size: xx-large;
-    margin-right: 20px;
+    font-size: x-large;
 }
 
 .carte {
@@ -57,8 +62,7 @@
         font-style: normal;
         font-style: italic;
         line-height: 40.82px;
-        font-size: 28px;
-        padding: 20px;
+        padding: 20px 20px 0px 20px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -66,6 +70,7 @@
 
         & h1 {
             margin: 15px 0px 15px 0px;
+            font-size: 1.75em;
         }
     }
 
@@ -81,7 +86,7 @@
     @keyframes check {
         0% {
             width: 0;
-            padding: 0;
+            padding: 29px 20px;
         }
         100% {
             width: 30px;
@@ -112,16 +117,18 @@
         & h2 {
             display: inline;
             margin-left: 20px;
-            margin-top: 50px;
+            margin-top: 30px;
             margin-bottom: 0;
             border-bottom: 3px solid rgba(153, 226, 208, 1);
-            width: 69px;
+            width: 60px;
+            size: 16px;
+            font-weight: 300;
         }
 
         &--card {
             display: flex;
             flex-direction: row;
-            align-items: center;
+            align-items: flex-end;
             justify-content: space-between;
             background-color: white;
             border-radius: 20px;
@@ -158,6 +165,14 @@
             & h3 {
                 margin-top: 5px;
                 margin-bottom: 5px;
+                font-size: 17px;
+                font-weight: 500;
+                line-height: 21.09px;
+                text-align: left;
+                width: 287px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
             }
             & p:not(.euros){
                 white-space: nowrap;
@@ -165,6 +180,11 @@
                 overflow: hidden;
                 margin-top: 5px;
                 margin-bottom: 5px;
+                font-size: 14.04px;
+                font-weight: 300;
+                line-height: 17.63px;
+                text-align: left;
+
             }
             & > .euros {
                 padding-right: 15px;
@@ -208,6 +228,7 @@
                     z-index:-1;
                     transition: opacity 250ms;
                     background: linear-gradient(200.64deg, #be8dfa -5.2%, #FF79DA 140.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+                    box-shadow: 0px 5.5px 5px rgba(0, 0, 0, 0.20);
                 }
         }
     }

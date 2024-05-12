@@ -86,11 +86,11 @@ body {
     @keyframes check {
         0% {
             width: 0;
-            padding: 29px 20px;
+            padding: 27.3px 0px;
         }
         100% {
             width: 30px;
-            padding: 29px 20px;
+            padding: 27.3px 20px;
         }
     }
 
@@ -138,10 +138,10 @@ body {
             @include box-shadow;
             &:active {
                 & > .text-cards{
-                animation: check-bar 500ms forwards;
+                animation: check-bar 500ms ease-in forwards;
                 }
                 & > .check {
-                animation: check 500ms forwards;
+                animation: check 500ms ease-in forwards;
                 }
             }
 
@@ -200,7 +200,7 @@ body {
             border-radius: 35px;
             padding: 20px 10px 20px 10px;
             background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-            width: 30%;
+            width: 186px;
             font-size: 16px;
             font-weight: 500;
             text-align: center;
@@ -275,10 +275,13 @@ body {
                 & li {
                     padding-top: 9px; 
                 } 
+                &--nav-link {
+                    color: white;
+                }
              }     
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1000px) {
 
     .header {
         width: 60%;
@@ -296,13 +299,6 @@ body {
         &__plats {
             margin: 0 20% 0 20%;
         }
-
-        &__bouton {
-
-            &--commande {
-                width: 20%;
-            }
-        }
     }
 
 
@@ -316,7 +312,7 @@ body {
         & li {
             display: inline;
             padding-left: 15px;
-        }
+        }        
     }
 
 }

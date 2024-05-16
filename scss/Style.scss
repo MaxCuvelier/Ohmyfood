@@ -102,6 +102,7 @@ body.loading .loader {
         }
         &__ville-selection {
             border: none;
+            font-family: "roboto", sans-serif;
             font-size: 16px;
             width: 109px;
             height: 19px;
@@ -431,7 +432,7 @@ body.loading .loader {
         padding-bottom: 35px;
 
         & h1 {
-            width: 68%;
+            width: 81%;
         }
     }
 
@@ -446,6 +447,12 @@ body.loading .loader {
         &__choix {
             font-size: 16px;
             font-weight: bold;
+            padding: 26px 95px 26px 37px;
+        }
+
+        &__chiffre {
+            left: -14px;
+            bottom: -46px;
         }
 
         &__fonctionnement-number {
@@ -457,7 +464,7 @@ body.loading .loader {
         align-items: center;
 
         & h2 {
-        width: 78%;
+        width: 81%;
     }
     }
 
